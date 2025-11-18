@@ -1,0 +1,3 @@
+CREATE (Musica {id: "", titulo: "", `duração`: ""})-[:FOI_COMPOSTA_POR {data: ""}]->(Artista {id: "", nomeReal: "", nomeArtistico: ""})-[:PARTICIPOU_DE {desde: "", ate: ""}]->(Banda {id: "", nomeArtistico: ""})-[:DEDICOU_SE_AO]->(Estilo {nome: ""})<-[:É_DE]-(Musica)<-[:FAVORITOU {data: ""}]-(Ouvinte:Ouvinte)-[:ESCUTOU {data: "", duracaoEscuta: ""}]->(Musica)<-[:INTERPRETOU {data: ""}]-(Banda)<-[:FAVORITOU {data: ""}]-(Ouvinte)-[:FAVORITOU {data: ""}]->(Artista)-[:DEDICOU_SE_AO]->(Estilo),
+(Pessoa:Pessoa {id: "", nome: "", email: "", dataCadastro: ""})-[:ATUOU_COMO {inicio: ""}]->(Artista)-[:INTERPRETOU {data: ""}]->(Musica),
+(Pessoa)-[:ATUOU_COMO]->(Ouvinte)
